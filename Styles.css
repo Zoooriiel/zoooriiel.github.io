@@ -1,0 +1,658 @@
+
+/* Font I'm using for my portfolio :) */
+@font-face {
+  font-family: "Rubik";
+  src: url(/assets/Fonts/Rubik-VariableFont_wght.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+video {
+  display: inline-block;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+img {
+  border: 0;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: "Rubik", sans-serif;
+  font-weight: 100;
+  position: relative;
+  background-color: hsl(27, 87%, 85%);
+  color: hsla(0, 0%, 0%, 0.949);
+}
+
+p {
+  line-height: 1.6;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/*
+* Header Page & Nav
+*/
+
+nav {
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  padding-right: 6rem;
+  padding-top: 3rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: hsl(27, 87%, 90%);
+  font-weight: 900;
+  transition: all 0.3s ease;
+  background-color: hsl(0, 0%, 0%);
+  padding: 8px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+}
+
+nav a:hover {
+  background-color: hsl(17, 77%, 65%);
+  color: hsl(27, 87%, 90%);
+  border-color: #333;
+}
+
+nav a:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 5px #fbddc7;
+}
+
+nav a.active {
+  color: hsl(0, 0%, 0%);
+  background-color: #e96269;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+}
+
+header {
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+header .imageContainer img {
+  width: 320px;
+  border-radius: 50%;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+header .headerText {
+  z-index: 1;
+  padding-left: 50px;
+}
+
+header .headerText h1 {
+  display: inline;
+  margin: 15px 0;
+  max-width: 200px;
+  width: 80%;
+  letter-spacing: 1px;
+  font-size: 6rem;
+}
+
+header .headerText h1 span {
+  display: block;
+}
+
+header p {
+  font-size: 2.2rem;
+  font-weight: 400;
+  width: 100%;
+  position: relative;
+}
+
+header p span {
+  color: #e96269;
+  font-weight: 800;
+}
+
+header .scrollDownText {
+  position: absolute;
+  text-align: center;
+  padding-top: 90vh;
+  font-size: 3.2rem;
+  color: #3a3a3a;
+  z-index: -11;
+}
+
+header .fa-angle-down {
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#waving-hand {
+  display: inline-block;
+  animation: wave 1.5s infinite ease-in-out;
+  transform-origin: 50% 100%; /* Adjusting the pivot to the middle bottom */
+  margin-left: 0.2rem;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+@media (min-width: 780px) {
+  header {
+    flex-direction: row;
+    height: 85vh;
+  }
+
+  header .headerText h1 {
+    font-size: 5rem;
+    max-width: 400px;
+  }
+
+  header .headerText h1 span {
+    display: inline;
+  }
+
+  header .headerText h1::after {
+    height: 23px;
+  }
+
+  header p {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1080px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header .headerText h1 {
+    font-weight: 700;
+    color: #292929;
+    font-size: 3rem;
+    padding-top: 5px;
+  }
+
+  header .imageContainer img {
+    margin-top: 3rem;
+  }
+}
+
+
+
+/* 
+* Projects section 
+*/
+
+.portfolioProjects {
+  background-color: hsl(270, 67%, 98%);
+  height: 100%;
+  padding: 3rem 1.5rem;
+}
+
+.projectswrapper {
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+  grid-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.project {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background-color: #121212;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 90%;
+  min-width: 400px;
+  min-height: 300px;
+}
+
+.project video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.toolsUsed {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.toolsUsed li {
+  background: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.viewProject {
+  display: flex;
+  gap: 1rem;
+}
+
+.viewProject .button {
+  text-decoration: none;
+  color: #121212;
+  background: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.viewProject .button:hover {
+  background-color: #f3ebfb;
+}
+
+
+@media (min-width: 768px) {
+  .project {
+    padding-bottom: 56.25%; /* Maintain aspect ratio */
+  }
+
+  .projectswrapper {
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 videos in a row */
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .project {
+    min-width: 300px; /* Adjust min-width for smaller mobile screens */
+  }
+
+  .projectswrapper {
+    padding: 2rem 0; /* Adjust padding on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolioProjects {
+    padding: 2rem 1rem;
+  }
+
+  .projectswrapper {
+    grid-template-columns: 1fr; /* Stack 1 video per row on smaller screens */
+  }
+
+  .project {
+    padding-bottom: 56.25%; /* Maintain aspect ratio */
+  }
+}
+
+
+
+/*
+* About Me Toolkit section
+*/
+
+.aboutMeSkills > div h2 {
+  font-size: 3rem;
+  color: #e96269;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: hsl(270, 67%, 98%);
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+
+.skills li {
+  list-style: none;
+  width: 80px;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.skills li img {
+  width: 40px;
+  margin-bottom: 5px;
+  height: 40px;
+}
+
+.hideDesktop {
+  display: block;
+}
+
+
+@media (min-width: 540px) {
+  .hideDesktop {
+    display: none;
+  }
+}
+
+.hideMobile {
+  display: none;
+}
+
+@media (min-width: 540px) {
+  .hideMobile {
+    display: block;
+  }
+}
+
+@media (min-width: 780px) {
+  .skills {
+    width: 90%;
+    margin-bottom: 90px;
+  }
+
+  .skills li {
+    margin: 0 20px;
+    width: 120px;
+  }
+
+  .skills li img {
+    width: 50px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .aboutMeSkills {
+    margin-bottom: 6rem;
+  }
+}
+
+
+
+/*
+* About Me Section
+*/
+
+.aboutMe {
+  min-height: 500px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: hsl(270, 67%, 98%);
+}
+
+.aboutMe h2 {
+  font-size: 3rem;
+  color: #e96269;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.aboutMe h2::after {
+  content: "";
+  position: absolute;
+  background-color: #ffe9e9;
+  box-shadow: 0 0 8px #ffd6d6;
+  height: 18px;
+  left: 5px;
+  bottom: 0;
+  width: 180px;
+  z-index: -1;
+}
+
+.aboutMe p {
+  font-size: 1.9rem;
+}
+
+.aboutMe .aboutMeTop {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+  margin-top: 40px;
+}
+
+.aboutMe .aboutMeTop .aboutMeBio {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutMe .aboutMeTop .aboutMeImage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+
+@media (min-width: 780px) {
+  .aboutMe .aboutMeTop {
+    flex-direction: row;
+  }
+
+  .aboutMe .aboutMeTop .aboutMeImage {
+    margin-left: 5%;
+    width: 120%;
+  }
+}
+
+@media (min-width: 1080px) {
+  .aboutMe .aboutMeTop .aboutMeImage {
+    width: 80%;
+  }
+}
+.aboutMe .aboutMeTop .aboutMeImage img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0.1, 0.1);
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .aboutMe .aboutMeTop .aboutMeImage {
+    margin-top: 5rem;
+  }
+}
+
+
+
+/* 
+* Contact Me 
+*/
+
+.contactMeSection {
+  background-color: hsl(27, 87%, 85%);
+  padding: 20px 0;
+}
+
+.contactMeTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactMeTop h2 {
+  font-size: 3rem;
+  color: #e96269;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.contactMeTop > p {
+  font-size: 1.8rem;
+  margin: 2rem;
+}
+
+#firstp {
+  margin-bottom: 0px;
+  letter-spacing: 0.5px;
+}
+
+.contact-icons {
+  margin-top: 8px;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: #040404;
+  font-size: 1.6rem;
+  margin: 0 10px;
+  font-weight: bold; /* Make it stand out */
+  letter-spacing: 1px; /* Slight letter spacing */
+  padding: 4px 8px; /* Padding for a "button-like" feel */
+  border-radius: 10px;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.contactMeSection a:hover {
+  background-color: #f3ebfb; /* Lavender background on hover */
+  color: #040404; /* Jet black text on hover */
+  cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+.contact-icons a:hover {
+  color: #f12506;
+}
