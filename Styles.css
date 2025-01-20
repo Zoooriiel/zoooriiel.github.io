@@ -255,6 +255,12 @@ header .fa-angle-down {
 
 /* Mobile */
 @media (max-width: 768px) {
+
+  nav{
+    display: flex;
+    justify-content: center;
+  }
+
   header .headerText h1 {
     font-weight: 700;
     color: #292929;
@@ -625,11 +631,11 @@ footer a:hover {
 
 @media (max-width: 768px) {
   footer {
-    flex-direction: column;
     gap: 15px;
   }
 
   footer a {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
+
 }
