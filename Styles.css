@@ -598,61 +598,38 @@ header .fa-angle-down {
 }
 
 
-
-/* 
-* Contact Me 
+/*
+* Footer
 */
 
-.contactMeSection {
-  background-color: hsl(27, 87%, 85%);
-  padding: 20px 0;
-}
-
-.contactMeTop {
+footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  background-color: #e96269;;
+  color: white;
 }
 
-.contactMeTop h2 {
-  font-size: 3rem;
-  color: #e96269;
-  position: relative;
-  margin-bottom: 3rem;
-}
-
-.contactMeTop > p {
-  font-size: 1.8rem;
-  margin: 2rem;
-}
-
-#firstp {
-  margin-bottom: 0px;
-  letter-spacing: 0.5px;
-}
-
-.contact-icons {
-  margin-top: 8px;
-}
-
-.contact-icons a {
+footer a {
+  font-size: 1.5rem;
+  color: white;
   text-decoration: none;
-  color: #040404;
-  font-size: 1.6rem;
-  margin: 0 10px;
-  font-weight: bold; /* Make it stand out */
-  letter-spacing: 1px; /* Slight letter spacing */
-  padding: 4px 8px; /* Padding for a "button-like" feel */
-  border-radius: 10px;
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.contactMeSection a:hover {
-  background-color: #f3ebfb; /* Lavender background on hover */
-  color: #040404; /* Jet black text on hover */
-  cursor: pointer; /* Pointer cursor for interactivity */
+footer a:hover {
+  transform: scale(1.1);
+  color: #000;
 }
 
-.contact-icons a:hover {
-  color: #f12506;
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  footer a {
+    font-size: 1.3rem;
+  }
 }
